@@ -1,0 +1,125 @@
+/* Sidebar */
+
+.sidebar {
+  flex: 0 0 25%;
+  margin: 0;
+  max-width: 25%;
+  box-sizing: border-box;
+  padding: 0 10px;
+
+  &__logo {
+    padding: {
+      bottom: 20px;
+    }
+  }
+  &__img {
+    width: 37px;
+    height: 37px;
+    position: relative;
+    top: 2px;
+    display: inline-block;
+    font-family: "toolkit-entypo";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-decoration: none;
+    color: #51586a;
+    line-height: 1;
+    transition: all .2s ease;
+    cursor: pointer;
+    &:hover {
+      color: #6f7890;
+    }
+    &:before {
+      content: "\EADB";
+    }
+  }
+  &__line {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin-top: 1rem;
+    margin-bottom: 30px;
+    border: 0;
+    border-top: 1px solid #434857;
+  }
+}
+
+.search {
+  position: relative;
+  &__inner {
+    display: flex;
+    flex-flow: row nowrap;
+    box-sizing: border-box;
+  }
+  &__input {
+    outline: 0;
+    display: block;
+    width: 100%;
+    padding: 0.375rem 15px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: $white-color;
+    background-color: #434857;
+    background-clip: padding-box;
+    border: 1px solid #434857;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+    &:focus {
+      color: #495057;
+      background-color: $white-color;
+      border-color: #71cced;
+      outline: 0;
+      box-shadow: 0 0 0 0.2rem rgba(25, 151, 198, 0.25);
+    }
+  }
+  &__btn {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 12px 10px 10px;
+    color: #9198aa;
+    border: 0;
+    line-height: 0;
+    background: transparent;
+  }
+}
+
+.sidebar-dashboard,
+.sidebar-more {
+  &__title {
+    padding: 0 15px;
+    margin-top: 28px;
+    margin-bottom: 5px;
+    font-size: 85%;
+    font-weight: normal;
+    letter-spacing: 1px;
+    color: #51586a;
+    text-transform: uppercase;
+  }
+  &__list {
+    margin: 0;
+    padding: 0;
+  }
+  &__item {
+    list-style: none;
+  }
+  &__link {
+    cursor: pointer;
+    text-decoration: none;
+    color: #cfd2da;
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    transition: all 0.1s linear;
+    &:hover {
+      color: $white-color;
+    }
+    &.active {
+      color: $white-color;
+      background-color: #1997c6;
+    }
+  }
+}
