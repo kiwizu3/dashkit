@@ -3,4 +3,389 @@
 //-------------------------------------------------------
 
 mixin menu()
-  // menu
+  - 
+    var listNav = [
+      {
+        item : "Dashboards",
+        icon: "fe fe-home",
+        href: "sidebarDashboards",
+        expanded : true,
+        submenu: [
+          {
+            item: "Default",
+            href: "#!"
+          },
+          {
+            item: "Alternative ",
+            href: "#!",
+            badge: true,
+          }
+        ]
+      },
+      {
+        item : "Pages",
+        icon: "fe fe-file",
+        href: "sidebarPages",
+        submenu: [
+          {
+            item: "Profile",
+            href: "sidebarProfile",
+            submenu: [
+              {
+                item: "Posts",
+                href: "#!"
+              },
+              {
+                item: "Groups",
+                href: "#!"
+              },
+              {
+                item: "Projects",
+                href: "New project"
+              },
+              {
+                item: "Files",
+                href: "#!"
+              },
+              {
+                item: "Subscribers",
+                href: "#!"
+              }
+            ]
+          },
+          {
+            item: "Project",
+            href: "sidebarProject",
+            submenu: [
+              {
+                item: "Overview",
+                href: "#!"
+              },
+              {
+                item: "Files",
+                href: "#!"
+              },
+              {
+                item: "Reports",
+                href: "New project"
+              },
+              {
+                item: "New team",
+                href: "#!"
+              }
+            ]
+          },
+          {
+            item: "Team",
+            href: "sidebarTeam",
+            submenu: [
+              {
+                item: "Overview",
+                href: "#!"
+              },
+              {
+                item: "Projects",
+                href: "#!"
+              },
+              {
+                item: "Members",
+                href: "#!"
+              },
+              {
+                item: "New team",
+                href: "#!"
+              }
+            ]
+          },
+          {
+            item: "Orders",
+            href: "#!"
+          },
+          {
+            item: "Feed",
+            href: "#!"
+          },
+          {
+            item: "Settings",
+            href: "#!"
+          },
+          {
+            item: "Invoice",
+            href: "#!"
+          },
+          {
+            item: "Pricing",
+            href: "#!"
+          }
+        ]
+      },
+      {
+        item : "Authentication",
+        icon: "fe fe-user",
+        href: "sidebarAuth",
+        submenu: [
+          {
+            item: "Sign in",
+            href: "sidebarSignIn",
+            submenu:[
+              {
+                item: "Cover",
+                href: "#!",
+              },
+              {
+                item: "Illustration",
+                href: "#!",
+              },
+              {
+                item: "Basic",
+                href: "#!",
+              }
+            ]
+          },
+          {
+            item: "Sign in",
+            href: "sidebarSignUp",
+            submenu:[
+              {
+                item: "Cover",
+                href: "#!",
+              },
+              {
+                item: "Illustration",
+                href: "#!",
+              },
+              {
+                item: "Basic",
+                href: "#!",
+              }
+            ]
+          },
+          {
+            item: "Password reset",
+            href: "sidebarPassword",
+            submenu:[
+              {
+                item: "Cover",
+                href: "#!",
+              },
+              {
+                item: "Illustration",
+                href: "#!",
+              },
+              {
+                item: "Basic",
+                href: "#!",
+              }
+            ]
+          },
+          {
+            item: "Error",
+            href: "sidebarError",
+            submenu:[
+              {
+                item: "Illustration",
+                href: "#!",
+              },
+              {
+                item: "Basic",
+                href: "#!",
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  ul.navbar-nav
+    each item in listNav
+      li.nav-item
+        a.nav-link.collapsed.level1(
+          href="#"+ item.href
+          data-toggle="collapse"
+          aria-expanded= item.expanded ? "true" : "false"
+          aria-controls=item.href
+          role="button"
+        )
+          i(class=item.icon)
+          span.text-link=item.item
+        if(item.submenu)
+          .collapse(
+            id=item.href
+            class= item.expanded ? "show" : ""
+          )
+            ul.nav.nav-flex-column
+              each sub in item.submenu
+                  li.nav-item(
+                    class=sub.badge ? "has-badge": "",
+                    class=sub.submenu ? "has-child": ""
+                  )
+                    if(sub.submenu)
+                      a.nav-link.collapsed.level2(
+                        href="#"+ sub.href
+                        data-toggle="collapse"
+                        aria-expanded="false"
+                        aria-controls=item.href
+                        role="button"
+                      )
+                        span.text-link=sub.item
+                    else
+                      a.nav-link.collapsed.level2(href="#!")
+                        span.text-link=sub.item
+                    if(sub.submenu)
+                      .collapse(id=sub.href)
+                        ul.nav.nav-flex-column
+                          each sub2 in sub.submenu
+                            li.nav-item
+                              a.nav-link.collapsed.level3(
+                                href=sub2.href
+                              )
+                                span.text-link=sub2.item
+
+mixin docsNav()
+  -
+    var listDocs = [
+      {
+        item: "Getting started",
+        icon: "fe fe-clipboard",
+        href: "!",
+      },
+      {
+        item: "Components",
+        icon: "fe fe-book-open",
+        href: "sidebarComponents",
+        submenu : [
+          {
+            item: "Alerts",
+            href: "#!",
+          },
+          {
+            item: "Avatars",
+            href: "#!",
+          },
+          {
+            item: "Badges",
+            href: "#!",
+          },
+          {
+            item: "Breadcrumb",
+            href: "#!",
+          },
+          {
+            item: "Buttons",
+            href: "#!",
+          },
+          {
+            item: "Button group",
+            href: "#!",
+          },
+          {
+            item: "Cards",
+            href: "#!",
+          },
+          {
+            item: "Charts",
+            href: "#!",
+          },
+          {
+            item: "Dropdowns",
+            href: "#!",
+          },
+          {
+            item: "Forms",
+            href: "#!",
+          },
+          {
+            item: "Icons",
+            href: "#!",
+          },
+          {
+            item: "Lists",
+            href: "#!",
+          },
+          {
+            item: "Modal",
+            href: "#!",
+          },
+          {
+            item: "Navs",
+            href: "#!",
+          },
+          {
+            item: "Navbar",
+            href: "#!",
+          },
+          {
+            item: "Page headers",
+            href: "#!",
+          },
+          {
+            item: "Pagination",
+            href: "#!",
+          },
+          {
+            item: "Popovers",
+            href: "#!",
+          },
+          {
+            item: "Social post",
+            href: "#!",
+          },
+          {
+            item: "Spinners",
+            href: "#!",
+          },
+          {
+            item: "Tables",
+            href: "#!",
+          },
+          {
+            item: "Toasts",
+            href: "#!",
+          },
+          {
+            item: "Tooltips",
+            href: "#!",
+          },
+          {
+            item: "Typography",
+            href: "#!",
+          },
+          {
+            item: "Utilities",
+            href: "#!",
+          },
+        ]
+      },
+      {
+        item: "Changelog ",
+        icon: "fe fe-git-branch",
+        href: "!",
+        ver : "v1.3.4",
+      }
+    ]
+  ul.navbar-nav
+    each item in listDocs
+      li.nav-item(
+        class=item.submenu ? "dropdown" : ""
+      )
+        a.nav-link.collapsed.qlevel1(
+          href="#"+item.href
+          data-toggle=item.submenu ? "collapse" : ""
+          aria-controls=item.submenu ? item.href : ""
+          role="button"
+          aria-expanded="false"
+        )
+          i(class=item.icon)
+          span.text-link=item.item
+          if(item.ver)
+            span.badge.badge-primary.ml-auto.my-badge=item.ver
+        if(item.submenu)
+          .collapse(
+            id=item.href
+          )
+            ul.nav.nav-flex-column
+              each sub in item.submenu
+                  li.nav-item
+                      a.nav-link.collapsed(
+                        href=sub.href
+                      )
+                        span.text-link=sub.item

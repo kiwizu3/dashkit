@@ -3,4 +3,58 @@
 //-------------------------------------------------------
 
 mixin sidebar()
-  .test
+  aside.sidebar
+    .navbar.navbar-vertical.navbar-expand-md.fixed-left.navbar-light.sidebar__inner
+      .container-fluild
+        // logo
+        .sidebar__logo
+          a.sidebar__link(href="#")
+            img.sidebar__img(src="../images/logo.svg")
+        /// end logo
+        .nav-collapse
+          // main nav
+          .collapse.navbar-collapse.main-nav
+            +menu()
+          /// end main nav
+
+          hr.navbar-devider.sidebar__line
+
+          // docs
+          .collapse.navbar-collapse.docs-nav
+            h3.navbar-heading Documentation
+            +docsNav()
+          /// end docs
+          .mt-auto.mr-auto--full
+          // custom
+          .custom
+            a.btn.btn-block.btn-primary.custom__btn(href="#sidebarModalDemo")&attributes({'data-toggle': 'modal'})
+              i.fe.fe-sliders.custom__icon
+              |Customize
+          /// end custom
+
+          // author
+          .navbar-user.d-flex
+            a.navbar-user__noti(
+              href="#sidebarModalActivity"
+              data-toggle="modal"
+            )
+              i.fe.fe-bell
+            .dropup.navbar-user_drop
+              a.rounded-circle.navbar-user_dropbtn#sidebarIconCopy(
+                data-toggle="dropdown",
+                aria-haspopup="true",
+                aria-expanded="false"  
+              )
+              ul.dropdown-menu(
+                aria-labelledby="sidebarIconCopy"
+              )
+                a.dropdown-item(href="#") Profile
+                a.dropdown-item(href="#") Settings
+                hr.dropdown-devider
+                a.dropdown-item(href="#") Logout
+            a.navbar-user__search(
+              href="#sidebarModalSearch"
+              data-toggle="modal"
+            )
+              i.fe.fe-search
+          /// end author 

@@ -9,8 +9,351 @@
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
   </head>
   <body>
+    <!-- modal activity-->
+    <div class="modal fade modal-activity" id="sidebarModalActivity" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title">Notifications</h4>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          </div>
+          <div class="modal-body">
+            <div class="d-flex list-group"><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-1.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Dianna Smiley</b><span class="txt-normal">shared your post with</span><b class="text-body">Ab Hadley, Adolfo Hess</b><span class="txt-normal">, and</span><b class="text-body">3 others</b></div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-2.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Ab Hadley</b><span class="txt-normal">reacted to your post with a 😍</span></div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-3.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Adolfo Hess</b><span class="txt-normal">commented </span>
+                    <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”</blockquote>
+                  </div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-4.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Daniela Dewitt</b><span class="txt-normal">subscribed to you.</span></div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-5.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Miyah Myles</b><span class="txt-normal">shared your post with</span><b class="text-body">Ryu Duke, Glen Rouse</b><span class="txt-normal">and</span><b class="text-body">3 others</b></div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-6.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Ryu Duke</b><span class="txt-normal">reacted to your post with a 😍</span></div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-7.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Glen Rouse</b><span class="txt-normal">commented </span>
+                    <blockquote class="text-body">“I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”</blockquote>
+                  </div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="avatar avatar-sm" src="../images/avatar-8.jpg"/></div>
+                  <div class="col text-muted"><b class="text-body">Grace Gross</b><span class="txt-normal">subscribed to you.</span></div>
+                  <div class="col-auto text-muted">2m</div>
+                </div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--/ end modal activity-->
+    <!-- modal demo-->
+    <div class="modal fade modal-demo" id="sidebarModalDemo" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical">
+        <div class="modal-content demo">
+          <div class="modal-inner">
+            <div class="modal-body"><a class="close" href="#!" data-dismiss="modal" aria-label="Close">&times;</a>
+              <div class="text-center demo__img"><img class="img-fluid" src="../images/designer-life.svg"/></div>
+              <h3 class="text-center demo__title"> Make Dashkit Your Own</h3>
+              <p class="text-center demo__para">Set preferences that will be cookied for your live preview demonstration.</p>
+              <hr class="demo__line"/>
+              <h4 class="demo__subtitle">Color Scheme</h4>
+              <p class="text-muted demo__des">Overall light or dark presentation.</p>
+              <div class="btn-group d-flex" data-toggle="buttons">
+                <label class="btn btn-white btn__demo active col">
+                  <input type="radio" name="colorScheme" id="colorSchemeLight" value="light" checked="true"/><i class="fe fe-sun"></i>Light Mode
+                </label>
+                <label class="btn btn-white btn__demo col">
+                  <input type="radio" name="colorScheme" id="colorSchemeDark" value="dark"/><i class="fe fe-moon"></i>Dark Mode
+                </label>
+              </div>
+              <h4 class="demo__subtitle">Navigation Position</h4>
+              <p class="text-muted demo__des">Select the primary navigation paradigm for your app.</p>
+              <div class="btn-group d-flex" data-toggle="buttons">
+                <label class="btn btn-white btn__demo active col">
+                  <input type="radio" name="navPosition" id="navPositionSidenav" value="sidenav" checked="true"/>Sidenav
+                </label>
+                <label class="btn btn-white btn__demo col">
+                  <input type="radio" name="navPosition" id="navPositionTopnav" value="topnav"/>Topnav
+                </label>
+                <label class="btn btn-white btn__demo col">
+                  <input type="radio" name="navPosition" id="navPositionCombo" value="combo"/>Combo
+                </label>
+              </div>
+              <h4 class="demo__subtitle">Sidebar Color</h4>
+              <p class="text-muted demo__des">Usually dictated by the color scheme, but can be overriden. </p>
+              <div class="btn-group d-flex" data-toggle="buttons">
+                <label class="btn btn-white btn__demo active col">
+                  <input type="radio" name="sidebarColor" id="sidebarColorDefault" value="default" checked="true"/>Default
+                </label>
+                <label class="btn btn-white btn__demo col">
+                  <input type="radio" name="sidebarColor" id="sidebarColorDefault" value="vibrant"/>Vibrant
+                </label>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-block btn-primary" type="submit">Preview</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- modal search-->
+    <div class="modal fade modal-search" id="sidebarModalSearch" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-vertical">
+        <div class="modal-content">
+          <div class="modal-body">
+            <form class="modal-search-form">
+              <div class="input-group-prepend"><i class="fe fe-search"></i></div>
+              <input class="form-control form-control-prepended search" type="search" placeholder="Search"/>
+            </form>
+            <div class="d-flex list-group"><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="rounded avatar-sm" src="../images/team-logo-1.jpg"/></div>
+                  <div class="col">
+                    <h4 class="text-body">Airbnb</h4>
+                    <p class="text-muted"> <i class="fe fe-clock"></i>Updated 2hr ago</p>
+                  </div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="rounded avatar-sm" src="../images/team-logo-2.jpg"/></div>
+                  <div class="col">
+                    <h4 class="text-body">Medium Corporation</h4>
+                    <p class="text-muted"> <i class="fe fe-clock"></i>Updated 2hr ago</p>
+                  </div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="rounded avatar-lg" src="../images/project-1.jpg"/></div>
+                  <div class="col">
+                    <h4 class="text-body">Homepage Redesign</h4>
+                    <p class="text-muted"> <i class="fe fe-clock"></i>Updated 4hr ago</p>
+                  </div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="rounded avatar-lg" src="../images/project-2.jpg"/></div>
+                  <div class="col">
+                    <h4 class="text-body">Travels &amp; Time</h4>
+                    <p class="text-muted"> <i class="fe fe-clock"></i>Updated 4hr ago</p>
+                  </div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="rounded avatar-lg" src="../images/project-3.jpg"/></div>
+                  <div class="col">
+                    <h4 class="text-body">Safari Exploration</h4>
+                    <p class="text-muted"> <i class="fe fe-clock"></i>Updated 4hr ago</p>
+                  </div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="rounded-circle avatar-sm" src="../images/avatar-1.jpg"/></div>
+                  <div class="col">
+                    <h4 class="text-body">Dianna Smiley</h4>
+                    <p class="text-success status"> <span class="ico">●</span><span class="txt">Online</span></p>
+                  </div>
+                </div></a><a class="list-group-item" href="#">
+                <div class="row">
+                  <div class="col-auto"><img class="rounded-circle avatar-sm" src="../images/avatar-2.jpg"/></div>
+                  <div class="col">
+                    <h4 class="text-body">Ab Hadley</h4>
+                    <p class="text-danger status"> <span class="ico">●</span><span class="txt">Offline</span></p>
+                  </div>
+                </div></a></div>
+          </div>
+        </div>
+      </div>
+    </div>
     <section class="content">
-      <div class="test"></div>
+      <aside class="sidebar">
+        <div class="navbar navbar-vertical navbar-expand-md fixed-left navbar-light sidebar__inner">
+          <div class="container-fluild">
+            <!-- logo-->
+            <div class="sidebar__logo"><a class="sidebar__link" href="#"><img class="sidebar__img" src="../images/logo.svg"/></a></div>
+            <!--/ end logo-->
+            <div class="nav-collapse">
+              <!-- main nav-->
+              <div class="collapse navbar-collapse main-nav">
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link collapsed level1" href="#sidebarDashboards" data-toggle="collapse" aria-expanded="true" aria-controls="sidebarDashboards" role="button"><i class="fe fe-home"></i><span class="text-link">Dashboards</span></a>
+                    <div class="collapse show" id="sidebarDashboards">
+                      <ul class="nav nav-flex-column">
+                        <li class="nav-item"><a class="nav-link collapsed level2" href="#!"><span class="text-link">Default</span></a>
+                        </li>
+                        <li class="nav-item has-badge"><a class="nav-link collapsed level2" href="#!"><span class="text-link">Alternative </span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link collapsed level1" href="#sidebarPages" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarPages" role="button"><i class="fe fe-file"></i><span class="text-link">Pages</span></a>
+                    <div class="collapse" id="sidebarPages">
+                      <ul class="nav nav-flex-column">
+                        <li class="nav-item has-child"><a class="nav-link collapsed level2" href="#sidebarProfile" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarPages" role="button"><span class="text-link">Profile</span></a>
+                          <div class="collapse" id="sidebarProfile">
+                            <ul class="nav nav-flex-column">
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Posts</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Groups</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="New project"><span class="text-link">Projects</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Files</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Subscribers</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item has-child"><a class="nav-link collapsed level2" href="#sidebarProject" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarPages" role="button"><span class="text-link">Project</span></a>
+                          <div class="collapse" id="sidebarProject">
+                            <ul class="nav nav-flex-column">
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Overview</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Files</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="New project"><span class="text-link">Reports</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">New team</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item has-child"><a class="nav-link collapsed level2" href="#sidebarTeam" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarPages" role="button"><span class="text-link">Team</span></a>
+                          <div class="collapse" id="sidebarTeam">
+                            <ul class="nav nav-flex-column">
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Overview</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Projects</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Members</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">New team</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item"><a class="nav-link collapsed level2" href="#!"><span class="text-link">Orders</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link collapsed level2" href="#!"><span class="text-link">Feed</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link collapsed level2" href="#!"><span class="text-link">Settings</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link collapsed level2" href="#!"><span class="text-link">Invoice</span></a>
+                        </li>
+                        <li class="nav-item"><a class="nav-link collapsed level2" href="#!"><span class="text-link">Pricing</span></a>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link collapsed level1" href="#sidebarAuth" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAuth" role="button"><i class="fe fe-user"></i><span class="text-link">Authentication</span></a>
+                    <div class="collapse" id="sidebarAuth">
+                      <ul class="nav nav-flex-column">
+                        <li class="nav-item has-child"><a class="nav-link collapsed level2" href="#sidebarSignIn" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAuth" role="button"><span class="text-link">Sign in</span></a>
+                          <div class="collapse" id="sidebarSignIn">
+                            <ul class="nav nav-flex-column">
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Cover</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Illustration</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Basic</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item has-child"><a class="nav-link collapsed level2" href="#sidebarSignUp" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAuth" role="button"><span class="text-link">Sign in</span></a>
+                          <div class="collapse" id="sidebarSignUp">
+                            <ul class="nav nav-flex-column">
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Cover</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Illustration</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Basic</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item has-child"><a class="nav-link collapsed level2" href="#sidebarPassword" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAuth" role="button"><span class="text-link">Password reset</span></a>
+                          <div class="collapse" id="sidebarPassword">
+                            <ul class="nav nav-flex-column">
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Cover</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Illustration</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Basic</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li class="nav-item has-child"><a class="nav-link collapsed level2" href="#sidebarError" data-toggle="collapse" aria-expanded="false" aria-controls="sidebarAuth" role="button"><span class="text-link">Error</span></a>
+                          <div class="collapse" id="sidebarError">
+                            <ul class="nav nav-flex-column">
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Illustration</span></a></li>
+                              <li class="nav-item"><a class="nav-link collapsed level3" href="#!"><span class="text-link">Basic</span></a></li>
+                            </ul>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+              <!--/ end main nav-->
+              <hr class="navbar-devider sidebar__line"/>
+              <!-- docs-->
+              <div class="collapse navbar-collapse docs-nav">
+                <h3 class="navbar-heading">Documentation</h3>
+                <ul class="navbar-nav">
+                  <li class="nav-item"><a class="nav-link collapsed qlevel1" href="#!" data-toggle="" aria-controls="" role="button" aria-expanded="false"><i class="fe fe-clipboard"></i><span class="text-link">Getting started</span></a>
+                  </li>
+                  <li class="nav-item dropdown"><a class="nav-link collapsed qlevel1" href="#sidebarComponents" data-toggle="collapse" aria-controls="sidebarComponents" role="button" aria-expanded="false"><i class="fe fe-book-open"></i><span class="text-link">Components</span></a>
+                    <div class="collapse" id="sidebarComponents">
+                      <ul class="nav nav-flex-column">
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Alerts</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Avatars</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Badges</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Breadcrumb</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Buttons</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Button group</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Cards</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Charts</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Dropdowns</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Forms</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Icons</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Lists</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Modal</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Navs</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Navbar</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Page headers</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Pagination</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Popovers</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Social post</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Spinners</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Tables</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Toasts</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Tooltips</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Typography</span></a></li>
+                        <li class="nav-item"><a class="nav-link collapsed" href="#!"><span class="text-link">Utilities</span></a></li>
+                      </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item"><a class="nav-link collapsed qlevel1" href="#!" data-toggle="" aria-controls="" role="button" aria-expanded="false"><i class="fe fe-git-branch"></i><span class="text-link">Changelog </span><span class="badge badge-primary ml-auto my-badge">v1.3.4</span></a>
+                  </li>
+                </ul>
+              </div>
+              <!--/ end docs-->
+              <div class="mt-auto mr-auto--full"></div>
+              <!-- custom-->
+              <div class="custom"><a class="btn btn-block btn-primary custom__btn" href="#sidebarModalDemo" data-toggle="modal"><i class="fe fe-sliders custom__icon"></i>Customize</a></div>
+              <!--/ end custom-->
+              <!-- author-->
+              <div class="navbar-user d-flex"><a class="navbar-user__noti" href="#sidebarModalActivity" data-toggle="modal"><i class="fe fe-bell"></i></a>
+                <div class="dropup navbar-user_drop"><a class="rounded-circle navbar-user_dropbtn" id="sidebarIconCopy" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></a>
+                  <ul class="dropdown-menu" aria-labelledby="sidebarIconCopy"><a class="dropdown-item" href="#">Profile</a><a class="dropdown-item" href="#">Settings</a>
+                    <hr class="dropdown-devider"/><a class="dropdown-item" href="#">Logout</a>
+                  </ul>
+                </div><a class="navbar-user__search" href="#sidebarModalSearch" data-toggle="modal"><i class="fe fe-search"></i></a>
+              </div>
+              <!--/ end author -->
+            </div>
+          </div>
+        </div>
+      </aside>
       <!-- main-->
     </section>
     <script src="vendor/javascripts/jquery.min.js" type="text/javascript"></script>

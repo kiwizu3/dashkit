@@ -4,12 +4,228 @@
 
 mixin modalDemo()
   // modal demo
+  .modal.fade.modal-demo#sidebarModalDemo(aria-hidden="true")
+    .modal-dialog.modal-dialog-vertical
+      .modal-content.demo
+        .modal-inner
+          .modal-body
+            a(
+              href="#!" class="close" data-dismiss="modal" aria-label="Close"
+            ) &times;
+            .text-center.demo__img
+              img.img-fluid(src="../images/designer-life.svg")
+            h3.text-center.demo__title  Make Dashkit Your Own
+            p.text-center.demo__para Set preferences that will be cookied for your live preview demonstration.
+            hr.demo__line
+            
+            h4.demo__subtitle Color Scheme
+            p.text-muted.demo__des Overall light or dark presentation.
+            .btn-group.d-flex(data-toggle="buttons")
+              label(class="btn btn-white btn__demo active col")
+                input(type="radio" name="colorScheme" id="colorSchemeLight" value="light" checked="true")
+                i.fe.fe-sun
+                | Light Mode
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="colorScheme" id="colorSchemeDark" value="dark")
+                i.fe.fe-moon
+                | Dark Mode
+            
+            h4.demo__subtitle Navigation Position
+            p.text-muted.demo__des Select the primary navigation paradigm for your app.
+            .btn-group.d-flex(data-toggle="buttons")
+              label(class="btn btn-white btn__demo active col")
+                input(type="radio" name="navPosition" id="navPositionSidenav" value="sidenav" checked="true")
+                | Sidenav
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="navPosition" id="navPositionTopnav" value="topnav")
+                | Topnav
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="navPosition" id="navPositionCombo" value="combo")
+                | Combo
 
-mixin modalMember()
-  // modal member
+            h4.demo__subtitle Sidebar Color
+            p.text-muted.demo__des Usually dictated by the color scheme, but can be overriden. 
+            .btn-group.d-flex(data-toggle="buttons")
+              label(class="btn btn-white btn__demo active col")
+                input(type="radio" name="sidebarColor" id="sidebarColorDefault" value="default" checked="true")
+                | Default
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="sidebarColor" id="sidebarColorDefault" value="vibrant")
+                | Vibrant
+          .modal-footer
+            button(
+              type="submit"
+              class="btn btn-block btn-primary"
+            ) Preview
 
 mixin modalSearch()
   // modal search
+  .modal.fade.modal-search#sidebarModalSearch(aria-hidden="true")
+    .modal-dialog.modal-dialog-vertical
+      .modal-content
+        .modal-body
+          form.modal-search-form
+            .input-group-prepend
+              i.fe.fe-search
+            input(type="search" class="form-control form-control-prepended search" placeholder="Search")
+          .d-flex.list-group
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-sm(src="../images/team-logo-1.jpg")
+                .col
+                  h4.text-body Airbnb
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 2hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-sm(src="../images/team-logo-2.jpg")
+                .col
+                  h4.text-body Medium Corporation
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 2hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-lg(src="../images/project-1.jpg")
+                .col
+                  h4.text-body Homepage Redesign
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 4hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-lg(src="../images/project-2.jpg")
+                .col
+                  h4.text-body Travels &amp; Time
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 4hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-lg(src="../images/project-3.jpg")
+                .col
+                  h4.text-body Safari Exploration
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 4hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded-circle.avatar-sm(src="../images/avatar-1.jpg")
+                .col
+                  h4.text-body Dianna Smiley
+                  p.text-success.status 
+                    span.ico ●
+                    span.txt Online
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded-circle.avatar-sm(src="../images/avatar-2.jpg")
+                .col
+                  h4.text-body Ab Hadley
+                  p.text-danger.status 
+                    span.ico ●
+                    span.txt Offline
 
 mixin modalActivity()
   // modal activity
+  .modal.fade.modal-activity#sidebarModalActivity(aria-hidden="true")
+    .modal-dialog.modal-dialog-vertical
+      .modal-content
+        .modal-header
+          h4.modal-title Notifications
+          button(
+            type="button" class="close" data-dismiss="modal" aria-label="Close"
+          )
+            span(
+              aria-hidden="true"
+            ) &times;
+        .modal-body
+          .d-flex.list-group
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-1.jpg")
+                .col.text-muted
+                  b.text-body Dianna Smiley
+                  span.txt-normal shared your post with
+                  b.text-body Ab Hadley, Adolfo Hess
+                  span.txt-normal , and
+                  b.text-body 3 others
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-2.jpg")
+                .col.text-muted
+                  b.text-body Ab Hadley
+                  span.txt-normal reacted to your post with a 😍
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-3.jpg")
+                .col.text-muted
+                  b.text-body Adolfo Hess
+                  span.txt-normal commented 
+                  blockquote.text-body “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-4.jpg")
+                .col.text-muted
+                  b.text-body Daniela Dewitt
+                  span.txt-normal subscribed to you.
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-5.jpg")
+                .col.text-muted
+                  b.text-body Miyah Myles
+                  span.txt-normal shared your post with
+                  b.text-body Ryu Duke, Glen Rouse
+                  span.txt-normal and
+                  b.text-body 3 others
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-6.jpg")
+                .col.text-muted
+                  b.text-body Ryu Duke
+                  span.txt-normal reacted to your post with a 😍
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-7.jpg")
+                .col.text-muted
+                  b.text-body Glen Rouse
+                  span.txt-normal commented 
+                  blockquote.text-body “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="../images/avatar-8.jpg")
+                .col.text-muted
+                  b.text-body Grace Gross
+                  span.txt-normal subscribed to you.
+                .col-auto.text-muted
+                  |2m
+  /// end modal activity

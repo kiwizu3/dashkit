@@ -1,0 +1,330 @@
+.navbar-light {
+  background-color: $light-color;
+  border-color: $light-border-color;
+}
+
+.avatar-sm {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .navbar-vertical.navbar-expand-md {
+    display: block;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    max-width: 250px;
+    padding: 12px 24px;
+    overflow-y: auto;
+    left: 0;
+    border-width: 0 1px 0 0;
+    border-style: solid;
+    border-color: $light-border-color;
+  }
+
+  .navbar-vertical.navbar-expand-md>[class*=container] {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    height: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
+.navbar-expand-md .navbar-nav {
+  flex-direction: column;
+  width: 100%;
+}
+
+.navbar-light .navbar-nav .nav-link {
+  &:hover {
+    color: $sidebar-color-hover;
+  }
+
+  &.level1 {
+    &:after {
+      display: block;
+      content: "\e92e";
+      font-family: Feather;
+      margin-left: auto;
+      transition: transform 0.2s;
+    }
+  }
+
+  &.level1,
+  &.qlevel1 {
+    display: flex;
+    align-content: center;
+    align-items: center;
+    padding: 9px 0;
+    color: $navbar-link-color;
+    font-size: 15px;
+    font-weight: 400;
+    position: relative;
+    transition: 0.2s linear;
+
+    &:hover {
+      color: $sidebar-color-hover;
+    }
+
+    &[aria-expanded="true"] {
+      color: $sidebar-color-hover;
+
+      &:after {
+        transition: transform 0.2s;
+        transform: rotate(-180deg);
+      }
+    }
+
+    >.fe {
+      display: inline-block;
+      min-width: 28px;
+      font-size: 17px;
+      padding-bottom: 2.125px;
+      line-height: 20.5px;
+    }
+  }
+
+}
+
+.nav.nav-flex-column {
+  flex-direction: column;
+
+  .nav-item {
+    &.has-badge {
+      .nav-link {
+        position: relative;
+        color: $navbar-link-active-color;
+
+        &:after {
+          display: block;
+          content: "New";
+          display: inline-block;
+          padding: 3px 5px;
+          font-size: 9.75px;
+          font-weight: 400;
+          line-height: 1;
+          text-align: center;
+          white-space: nowrap;
+          top: 10px;
+          right: 0;
+          position: absolute;
+          color: $navbar-badge-color;
+          background-color: $navbar-badge-bg;
+          border-radius: 6px;
+        }
+
+        &:before {
+          content: "";
+          position: absolute;
+          left: -24px;
+          top: 8px;
+          bottom: 8px;
+          border-left: 2px solid $navbar-badge-border;
+        }
+      }
+    }
+  }
+
+  .nav-link {
+    display: block;
+    font-size: 13px;
+    font-weight: 400;
+    padding-left: 28px;
+    color: $navbar-main-color;
+  }
+
+  .has-child {
+    >.nav-link {
+      position: relative;
+
+      &[aria-expanded="true"] {
+        color: $sidebar-color-hover;
+
+        &:after {
+          transition: transform 0.2s;
+          transform: rotate(-180deg);
+        }
+      }
+
+      &:after {
+        position: absolute;
+        top: 8px;
+        right: 0;
+        content: "\e92e";
+        font-family: Feather;
+        margin-left: auto;
+        transition: transform 0.2s;
+      }
+    }
+  }
+
+  .level3 {
+    padding-left: 40px;
+  }
+}
+
+.docs-nav {
+  flex-direction: column;
+
+  .navbar-heading {
+    width: 100%;
+    color: $nabar-heading-color;
+    padding: 8px 0;
+    font-size: 10px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: left;
+    letter-spacing: 0.4px;
+  }
+
+  .navbar-nav {
+    .dropdown {
+      .qlevel1 {
+        &:after {
+          display: block;
+          content: "\e92e";
+          font-family: Feather;
+          margin-left: auto;
+          transition: transform 0.2s;
+        }
+      }
+    }
+  }
+
+  .my-badge {
+    border-radius: 6px;
+    background: $my-badge-color;
+    font-weight: 400;
+    padding: 2.7125px 5.7125px;
+    padding-left: 4.9125px;
+    line-height: normal;
+  }
+}
+
+.navbar-user {
+  line-height: normal;
+  align-items: center;
+  justify-content: space-around;
+  margin-left: -1.5rem;
+  margin-right: -1.5rem;
+  padding: 1.5rem 1.5rem 0.75rem;
+  border-top-width: 1px;
+  border-top-style: solid;
+  border-top-color: $light-border-color;
+  position: relative;
+  top: 3px;
+  left: -1px;
+
+  &__noti,
+  &__search {
+    text-decoration: none;
+    color: $navbar-main-color;
+    font-weight: 400;
+
+    &:hover {
+      text-decoration: none;
+      color: $sidebar-color-hover;
+    }
+
+    i.fe {
+      display: block;
+      min-width: 25.5px;
+      text-align: center;
+      font-size: 17px;
+    }
+  }
+
+  &_dropbtn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background-image: url("../images/avatar-1.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    cursor: pointer;
+    position: relative;
+
+    &:before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      right: 2%;
+      width: 30%;
+      height: 30%;
+      border-radius: 50%;
+      border: 2px solid $light-color;
+      background-color: $navbar-badge-color;
+    }
+  }
+}
+
+.nav-collapse {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  .mr-auto--full {
+    height: 100%;
+  }
+
+  .custom {
+    margin-bottom: 20px;
+    min-width: 100%;
+
+    &__btn {
+      font-size: 15px;
+      border-radius: 6px;
+      background-color: $navbar-badge-border;
+      border-color: $navbar-badge-border;
+      padding: 8px 12px;
+      height: auto;
+      border-top-width: 2px;
+      border-bottom-width: 2px;
+
+      &:hover {
+        background-color: $btn-hover-color;
+        border-color: $btn-border-color;
+      }
+
+      .fe {
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  &.show {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 6px 24px;
+  clear: both;
+  font-weight: 400;
+  color: $navbar-main-color;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+
+  &:hover {
+    color: $sidebar-color-hover;
+    text-decoration: none;
+    background-color: transparent;
+  }
+}
+
+.text-muted {
+  color: $text-muted-color !important;
+}
