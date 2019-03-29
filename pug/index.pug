@@ -1,0 +1,18 @@
+extends layout/_core
+
+block head
+  +head()
+block body
+  +modalActivity()
+  +modalDemo()
+  +modalSearch()
+  section.content
+    +sidebar()
+    include modules/_main
+  +plugins("vendor/javascripts/jquery.min.js")
+  +plugins("vendor/javascripts/bootstrap.min.js")
+  +plugins("vendor/javascripts/Chart.min.js")
+  +plugins("js/main.js")
+  .test
+    |ewrerwrwerwerwrwerwr 
+  

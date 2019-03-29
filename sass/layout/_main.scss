@@ -1,0 +1,38 @@
+.content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.main {
+  width: calc(100% - 250px);
+
+  .container-fluid {
+    padding-left: 36px !important;
+    padding-right: 36px !important;
+  }
+
+  .header {
+    .row--center {
+      align-items: center;
+    }
+
+    padding: 24px 0;
+
+    &-subtitle {
+      font-size: 10px;
+      text-transform: uppercase;
+      color: #95aac9;
+      margin-bottom: 9px;
+      letter-spacing: 0.8px;
+      font-weight: 500;
+    }
+
+    &-title {
+      font-size: 26px;
+      font-weight: 500;
+      margin: 0;
+      letter-spacing: -0.52px;
+      line-height: 1.1;
+    }
+  }
+}
