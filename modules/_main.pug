@@ -73,9 +73,9 @@ section.main
                   h4.card-header-title Devices
                 .col-auto
                   ul.nav-cards
-                    li.nav-cards-item.active#devicesChart
+                    li.nav-cards-item.js-nav-cards-devices.active#devicesChart
                       a.nav-cards-link(href="javascript:void(0)") All
-                    li.nav-cards-item#devicesDirect
+                    li.nav-cards-item.js-nav-cards-devices#devicesDirect
                       a.nav-cards-link(href="javascript:void(0)") Direct
             .card-body
               .chart.right
@@ -137,11 +137,11 @@ section.main
                     h4.card-header-title Performance
                   .col-auto
                     ul.nav-cards
-                      li.nav-cards-item.active#performanceAll
+                      li.nav-cards-item.js-nav-cards-item.active#performanceAll
                         a.nav-cards-link(href="javascript:void(0)") All
-                      li.nav-cards-item#performanceDirect
+                      li.nav-cards-item.js-nav-cards-item#performanceDirect
                         a.nav-cards-link(href="javascript:void(0)") Direct
-                      li.nav-cards-item#performanceOrganic
+                      li.nav-cards-item.js-nav-cards-item#performanceOrganic
                         a.nav-cards-link(href="javascript:void(0)") Organic
               .card-body
                 .chart.right
@@ -150,6 +150,15 @@ section.main
     .table-goal
       .row
         .col-12.col-xl-7
+          .card
+            .card-header
+              .row.row--center
+                .col
+                  h4.card-header-title Goals
+                .col-auto
+                  a.btn.btn-sm.btn-white.btn--border Export
+            .card-body
+              
         .col-12.col-xl-5.right
           .card
             .card-body.text-center

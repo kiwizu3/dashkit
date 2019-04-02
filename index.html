@@ -7,6 +7,7 @@
     <title>Dashkit</title>
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/stylesheets/jquery.dataTables.min.css"/>
   </head>
   <body>
     <!-- modal activity-->
@@ -460,8 +461,8 @@
                       </div>
                       <div class="col-auto">
                         <ul class="nav-cards">
-                          <li class="nav-cards-item active" id="devicesChart"><a class="nav-cards-link" href="javascript:void(0)">All</a></li>
-                          <li class="nav-cards-item" id="devicesDirect"><a class="nav-cards-link" href="javascript:void(0)">Direct</a></li>
+                          <li class="nav-cards-item js-nav-cards-devices active" id="devicesChart"><a class="nav-cards-link" href="javascript:void(0)">All</a></li>
+                          <li class="nav-cards-item js-nav-cards-devices" id="devicesDirect"><a class="nav-cards-link" href="javascript:void(0)">Direct</a></li>
                         </ul>
                       </div>
                     </div>
@@ -554,9 +555,9 @@
                       </div>
                       <div class="col-auto">
                         <ul class="nav-cards">
-                          <li class="nav-cards-item active" id="performanceAll"><a class="nav-cards-link" href="javascript:void(0)">All</a></li>
-                          <li class="nav-cards-item" id="performanceDirect"><a class="nav-cards-link" href="javascript:void(0)">Direct</a></li>
-                          <li class="nav-cards-item" id="performanceOrganic"><a class="nav-cards-link" href="javascript:void(0)">Organic</a></li>
+                          <li class="nav-cards-item js-nav-cards-item active" id="performanceAll"><a class="nav-cards-link" href="javascript:void(0)">All</a></li>
+                          <li class="nav-cards-item js-nav-cards-item" id="performanceDirect"><a class="nav-cards-link" href="javascript:void(0)">Direct</a></li>
+                          <li class="nav-cards-item js-nav-cards-item" id="performanceOrganic"><a class="nav-cards-link" href="javascript:void(0)">Organic</a></li>
                         </ul>
                       </div>
                     </div>
@@ -574,7 +575,19 @@
           </div>
           <div class="table-goal">
             <div class="row">
-              <div class="col-12 col-xl-7"></div>
+              <div class="col-12 col-xl-7">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h4 class="card-header-title">Goals</h4>
+                      </div>
+                      <div class="col-auto"><a class="btn btn-sm btn-white btn--border">Export</a></div>
+                    </div>
+                  </div>
+                  <div class="card-body"></div>
+                </div>
+              </div>
               <div class="col-12 col-xl-5 right">
                 <div class="card">
                   <div class="card-body text-center">

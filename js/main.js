@@ -204,14 +204,14 @@ $(function () {
   drawDevice(dataDevices);
 
   $("#devicesDirect").on("click", function () {
-    $(".nav-cards-item").removeClass("active");
+    $(".js-nav-cards-devices").removeClass("active");
     $(this).addClass("active");
     dataDevices.datasets[0].data = [15, 45, 20];
     _chart2.update();
   });
 
   $("#devicesChart").on("click", function () {
-    $(".nav-cards-item").removeClass("active");
+    $(".js-nav-cards-devices").removeClass("active");
     $(this).addClass("active");
     dataDevices.datasets[0].data = [60, 25, 15];
     _chart2.update();
@@ -330,21 +330,21 @@ $(function () {
   drawPerformance(dataPerformance)
 
   $("#performanceAll").on("click", function () {
-    $(".nav-cards-item").removeClass("active");
+    $(".js-nav-cards-item").removeClass("active");
     $(this).addClass("active");
     dataPerformance.datasets[0].data = [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40];
     _chart3.update();
   });
 
   $("#performanceDirect").on("click", function () {
-    $(".nav-cards-item").removeClass("active");
+    $(".js-nav-cards-item").removeClass("active");
     $(this).addClass("active");
     dataPerformance.datasets[0].data = [7, 35, 12, 27, 34, 17, 19, 30, 28, 32, 24, 39];
     _chart3.update();
   });
 
   $("#performanceOrganic").on("click", function () {
-    $(".nav-cards-item").removeClass("active");
+    $(".js-nav-cards-item").removeClass("active");
     $(this).addClass("active");
     dataPerformance.datasets[0].data = [2, 12, 35, 25, 36, 25, 34, 16, 4, 14, 15, 37];
     _chart3.update();
