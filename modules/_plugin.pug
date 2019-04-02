@@ -1,8 +1,9 @@
 //-------------------------------------------------------
 //- Modules :: Plugins
 //-------------------------------------------------------
-mixin plugins(href)
-  script(
-    src=href,
-    type="text/javascript"
-  )
+mixin plugins(args)
+  each arg in args
+    script(
+      src= `${arg}`
+      type="text/javascript"
+    )

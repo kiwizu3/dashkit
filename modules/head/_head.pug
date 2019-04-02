@@ -1,7 +1,7 @@
 //-------------------------------------------------------
 //- Modules :: Head
 //-------------------------------------------------------
-mixin head()
+mixin head(title)
   meta(charset='UTF-8')
   meta(
     name='viewport',
@@ -11,7 +11,7 @@ mixin head()
     http-equiv='X-UA-Compatible',
     content='ie=edge'
   )
-  title  Dashkit
+  title= title 
   link(
     rel='icon',
     href='images/favicon.ico'

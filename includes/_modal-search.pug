@@ -1,0 +1,79 @@
+//-------------------------------------------------------
+//- Modules :: Modal search
+//-------------------------------------------------------
+
+
+mixin modalSearch()
+  // modal search
+  .modal.fade.modal-search#sidebarModalSearch(aria-hidden="true")
+    .modal-dialog.modal-dialog-vertical
+      .modal-content
+        .modal-body
+          form.modal-search-form
+            .input-group-prepend
+              i.fe.fe-search
+            input(type="search" class="form-control form-control-prepended search" placeholder="Search")
+          .d-flex.list-group
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-sm(src="images/team-logo-1.jpg")
+                .col
+                  h4.text-body Airbnb
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 2hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-sm(src="images/team-logo-2.jpg")
+                .col
+                  h4.text-body Medium Corporation
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 2hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-lg(src="images/project-1.jpg")
+                .col
+                  h4.text-body Homepage Redesign
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 4hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-lg(src="images/project-2.jpg")
+                .col
+                  h4.text-body Travels &amp; Time
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 4hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded.avatar-lg(src="images/project-3.jpg")
+                .col
+                  h4.text-body Safari Exploration
+                  p.text-muted 
+                    i.fe.fe-clock
+                    | Updated 4hr ago
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded-circle.avatar-sm(src="images/avatar-1.jpg")
+                .col
+                  h4.text-body Dianna Smiley
+                  p.text-success.status 
+                    span.ico ●
+                    span.txt Online
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.rounded-circle.avatar-sm(src="images/avatar-2.jpg")
+                .col
+                  h4.text-body Ab Hadley
+                  p.text-danger.status 
+                    span.ico ●
+                    span.txt Offline

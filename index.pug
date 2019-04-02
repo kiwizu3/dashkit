@@ -1,7 +1,7 @@
 extends layout/_core
 
 block head
-  +head()
+  +head("Dashkit")
 block body
   +modalActivity()
   +modalDemo()
@@ -9,7 +9,4 @@ block body
   section.content
     +sidebar()
     include modules/_main
-  +plugins("vendor/javascripts/jquery.min.js")
-  +plugins("vendor/javascripts/bootstrap.min.js")
-  +plugins("vendor/javascripts/Chart.min.js")
-  +plugins("js/main.js")
+  +plugins(["vendor/javascripts/jquery.min.js","vendor/javascripts/bootstrap.min.js","vendor/javascripts/Chart.min.js","vendor/javascripts/Chart.extension.min.js","js/main.js"])

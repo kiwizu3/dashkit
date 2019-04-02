@@ -1,10 +1,162 @@
 // main
 section.main
-  .header.container-fluid
-    .row.row--center
-      .col
-        h6.header-subtitle Overview
-        h1.header-title Dashboard
-      .col-auto
-        a.btn.btn-primary.btn-block(href="#!") Create Report
+  .container-fluid
+    .header
+      .row.row--center
+        .col
+          h6.header-subtitle Overview
+          h1.header-title Dashboard
+        .col-auto
+          a.btn.btn-primary.btn-block(href="#!") Create Report
+    .stats
+      .row
+        - 
+          var listCard = [
+            {title: "Budget", icon: "fe fe-dollar-sign", value: "$24,500", badge: "+3.5%"},
+            {title: "Total Hours", icon: "fe fe-briefcase", value: "763.5"},
+            {title: "Progress", icon: "fe fe-clipboard", value: "84.5%", progress: "84.5%"},
+            {title: "Effective Hourly", icon: "fe fe-clock", value: "$85.50"},
+          ];
+        each item in listCard
+          .col-12.col-lg-6.col-xl.card-item
+            .card
+              .card-body
+                .row.row--center
+                  .col
+                    h6.card-title=item.title
+                    if(!item.progress)
+                      span.card-value.h2= item.value
+                    else
+                      .row.row--center
+                        .col-auto.col-no-pr
+                          span.card-value.h2= item.value
+                        .col.col-no-pd
+                          .progress
+                            .progress-bar(
+                              style=`width: ${item.progress}`
+                              aria-valuenow="85"
+                              aria-valuemin="0"
+                              aria-valuemax="100"
+                            )
+                    if (item.badge)
+                      span.badge.badge--green= item.badge
+                  .col-auto
+                    i.h2(class=item.icon)
+    .chartjs
+      .row
+        .col-12.col-xl-8
+          .card
+            .card-header
+              .row.row--center
+                .col
+                  h4.card-header-title Orders
+                .col-auto
+                  span.card-header-text.text-muted Show affiliate:
+                .col-auto
+                  .custom-control.custom-switch
+                    input(
+                      type="checkbox"
+                      class="custom-control-input"
+                      id="cardToggle"
+                      data-toggle="chart"
+                      data-target="#ordersChart"
+                    )
+                    label.custom-control-label(for="cardToggle")
+            .card-body
+              .chart  
+                canvas#ordersChart.chart-canvas
+        .col-12.col-xl-4
+          .card
+            .card-header.no-pd-tb
+              .row.row--center
+                .col
+                  h4.card-header-title Devices
+                .col-auto
+                  ul.nav-cards
+                    li.nav-cards-item.active#devicesChart
+                      a.nav-cards-link(href="javascript:void(0)") All
+                    li.nav-cards-item#devicesDirect
+                      a.nav-cards-link(href="javascript:void(0)") Direct
+            .card-body
+              .chart.right
+                .canvas-wrapper
+                  canvas#deviceChart
+              .chart-legend
+                span.chart-legend-item
+                  i.chart-legend-indicator.desktop
+                  | Desktop
+                span.chart-legend-item
+                  i.chart-legend-indicator.tablet
+                  | Tablet
+                span.chart-legend-item
+                  i.chart-legend-indicator.mobile
+                  | Mobile
+    .chartjs-bottom
+      .row
+        .col-12.col-xl-4
+          .card
+            .card-header
+              .row.row--center
+                .col
+                  h4.card-header-title Projects
+                .col-auto
+                  a.card-header-link.small(href="#!") View all
+            .card-body
+              - 
+                var listCard = [
+                  {avatar: "images/project-1.jpg", title: "Homepage Redesign", time : "Updated 5hr ago"},
+                  {avatar: "images/project-2.jpg", title: "Travels & Time", time : "Updated 3hr ago"},
+                  {avatar: "images/project-3.jpg", title: "Safari Exploration", time : "Updated 10hr ago"},
+                  {avatar: "images/project-5.jpg", title: "Personal Site", time : "Updated 4hr ago"},
+                ];
+              each item,index in listCard
+                .row.row--center
+                  .col-auto
+                    a.avatar(href="#"): img(src= item.avatar)
+                  .col.no-pl
+                    h4.card-title
+                      a.card-link(href='#!')= item.title
+                    p.card-text= item.time
+                  .col-auto
+                    .dropdown
+                      a(
+                        class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                      )
+                        i(class="fe fe-more-vertical")
+                      .dropdown-menu.dropdown-menu-right
+                        a.dropdown-item(href='#!') Action
+                        a.dropdown-item(href='#!') Another action
+                        a.dropdown-item(href='#!') Something else here
+                if(index!=listCard.length-1)
+                  hr
+        .col-12.col-xl-8
+          .card
+              .card-header.no-pd-tb
+                .row.row--center
+                  .col
+                    h4.card-header-title Performance
+                  .col-auto
+                    ul.nav-cards
+                      li.nav-cards-item.active#performanceAll
+                        a.nav-cards-link(href="javascript:void(0)") All
+                      li.nav-cards-item#performanceDirect
+                        a.nav-cards-link(href="javascript:void(0)") Direct
+                      li.nav-cards-item#performanceOrganic
+                        a.nav-cards-link(href="javascript:void(0)") Organic
+              .card-body
+                .chart.right
+                  .canvas-wrapper
+                    canvas#performance
+    .table-goal
+      .row
+        .col-12.col-xl-7
+        .col-12.col-xl-5.right
+          .card
+            .card-body.text-center
+              .row.row--center
+                .col-12.col-xl-10
+                  img.happy(src="images/happiness.svg")
+                  h3.mb-2 We released 2008 new versions of our theme for glory.
+                  p.text-muted This is a true story and totally not made up. This is going to be better in the long run but for now this is the way it is.
+                  a.btn.btn-primary(href='#!') Try it for free
 /// end main

@@ -1,0 +1,59 @@
+//-------------------------------------------------------
+//- Modules :: Modal demo
+//-------------------------------------------------------
+
+mixin modalDemo()
+  // modal demo
+  .modal.fade.modal-demo#sidebarModalDemo(aria-hidden="true")
+    .modal-dialog.modal-dialog-vertical
+      .modal-content.demo
+        .modal-inner
+          .modal-body
+            a(
+              href="#!" class="close" data-dismiss="modal" aria-label="Close"
+            ) &times;
+            .text-center.demo__img
+              img.img-fluid(src="images/designer-life.svg")
+            h3.text-center.demo__title  Make Dashkit Your Own
+            p.text-center.demo__para Set preferences that will be cookied for your live preview demonstration.
+            hr.demo__line
+            
+            h4.demo__subtitle Color Scheme
+            p.text-muted.demo__des Overall light or dark presentation.
+            .btn-group.d-flex(data-toggle="buttons")
+              label(class="btn btn-white btn__demo active col")
+                input(type="radio" name="colorScheme" id="colorSchemeLight" value="light" checked="true")
+                i.fe.fe-sun
+                | Light Mode
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="colorScheme" id="colorSchemeDark" value="dark")
+                i.fe.fe-moon
+                | Dark Mode
+            
+            h4.demo__subtitle Navigation Position
+            p.text-muted.demo__des Select the primary navigation paradigm for your app.
+            .btn-group.d-flex(data-toggle="buttons")
+              label(class="btn btn-white btn__demo active col")
+                input(type="radio" name="navPosition" id="navPositionSidenav" value="sidenav" checked="true")
+                | Sidenav
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="navPosition" id="navPositionTopnav" value="topnav")
+                | Topnav
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="navPosition" id="navPositionCombo" value="combo")
+                | Combo
+
+            h4.demo__subtitle Sidebar Color
+            p.text-muted.demo__des Usually dictated by the color scheme, but can be overriden. 
+            .btn-group.d-flex(data-toggle="buttons")
+              label(class="btn btn-white btn__demo active col")
+                input(type="radio" name="sidebarColor" id="sidebarColorDefault" value="default" checked="true")
+                | Default
+              label(class="btn btn-white btn__demo col")
+                input(type="radio" name="sidebarColor" id="sidebarColorDefault" value="vibrant")
+                | Vibrant
+          .modal-footer
+            button(
+              type="submit"
+              class="btn btn-block btn-primary"
+            ) Preview

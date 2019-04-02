@@ -4,7 +4,7 @@
     <meta charset="UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <title> Dashkit</title>
+    <title>Dashkit</title>
     <link rel="icon" href="images/favicon.ico"/>
     <link rel="stylesheet" type="text/css" href="css/style.min.css"/>
   </head>
@@ -356,13 +356,238 @@
       </aside>
       <!-- main-->
       <section class="main">
-        <div class="header container-fluid">
-          <div class="row row--center">
-            <div class="col">
-              <h6 class="header-subtitle">Overview</h6>
-              <h1 class="header-title">Dashboard</h1>
+        <div class="container-fluid">
+          <div class="header">
+            <div class="row row--center">
+              <div class="col">
+                <h6 class="header-subtitle">Overview</h6>
+                <h1 class="header-title">Dashboard</h1>
+              </div>
+              <div class="col-auto"><a class="btn btn-primary btn-block" href="#!">Create Report</a></div>
             </div>
-            <div class="col-auto"><a class="btn btn-primary btn-block" href="#!">Create Report</a></div>
+          </div>
+          <div class="stats">
+            <div class="row">
+              <div class="col-12 col-lg-6 col-xl card-item">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h6 class="card-title">Budget</h6><span class="card-value h2">$24,500</span><span class="badge badge--green">+3.5%</span>
+                      </div>
+                      <div class="col-auto"><i class="h2 fe fe-dollar-sign"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl card-item">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h6 class="card-title">Total Hours</h6><span class="card-value h2">763.5</span>
+                      </div>
+                      <div class="col-auto"><i class="h2 fe fe-briefcase"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl card-item">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h6 class="card-title">Progress</h6>
+                        <div class="row row--center">
+                          <div class="col-auto col-no-pr"><span class="card-value h2">84.5%</span></div>
+                          <div class="col col-no-pd">
+                            <div class="progress">
+                              <div class="progress-bar" style="width: 84.5%" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-auto"><i class="h2 fe fe-clipboard"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-lg-6 col-xl card-item">
+                <div class="card">
+                  <div class="card-body">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h6 class="card-title">Effective Hourly</h6><span class="card-value h2">$85.50</span>
+                      </div>
+                      <div class="col-auto"><i class="h2 fe fe-clock"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chartjs">
+            <div class="row">
+              <div class="col-12 col-xl-8">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h4 class="card-header-title">Orders</h4>
+                      </div>
+                      <div class="col-auto"><span class="card-header-text text-muted">Show affiliate:</span></div>
+                      <div class="col-auto">
+                        <div class="custom-control custom-switch">
+                          <input class="custom-control-input" type="checkbox" id="cardToggle" data-toggle="chart" data-target="#ordersChart">
+                          <label class="custom-control-label" for="cardToggle"></label>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart"> 
+                      <canvas class="chart-canvas" id="ordersChart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-4">
+                <div class="card">
+                  <div class="card-header no-pd-tb">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h4 class="card-header-title">Devices</h4>
+                      </div>
+                      <div class="col-auto">
+                        <ul class="nav-cards">
+                          <li class="nav-cards-item active" id="devicesChart"><a class="nav-cards-link" href="javascript:void(0)">All</a></li>
+                          <li class="nav-cards-item" id="devicesDirect"><a class="nav-cards-link" href="javascript:void(0)">Direct</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart right">
+                      <div class="canvas-wrapper">
+                        <canvas id="deviceChart"></canvas>
+                      </div>
+                    </div>
+                    <div class="chart-legend"><span class="chart-legend-item"><i class="chart-legend-indicator desktop"></i>Desktop</span><span class="chart-legend-item"><i class="chart-legend-indicator tablet"></i>Tablet</span><span class="chart-legend-item"><i class="chart-legend-indicator mobile"></i>Mobile</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="chartjs-bottom">
+            <div class="row">
+              <div class="col-12 col-xl-4">
+                <div class="card">
+                  <div class="card-header">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h4 class="card-header-title">Projects</h4>
+                      </div>
+                      <div class="col-auto"><a class="card-header-link small" href="#!">View all</a></div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="row row--center">
+                      <div class="col-auto"><a class="avatar" href="#"><img src="images/project-1.jpg"></a></div>
+                      <div class="col no-pl">
+                        <h4 class="card-title"><a class="card-link" href="#!">Homepage Redesign</a></h4>
+                        <p class="card-text">Updated 5hr ago</p>
+                      </div>
+                      <div class="col-auto">
+                        <div class="dropdown"><a class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                          <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Action</a><a class="dropdown-item" href="#!">Another action</a><a class="dropdown-item" href="#!">Something else here</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row row--center">
+                      <div class="col-auto"><a class="avatar" href="#"><img src="images/project-2.jpg"></a></div>
+                      <div class="col no-pl">
+                        <h4 class="card-title"><a class="card-link" href="#!">Travels &amp; Time</a></h4>
+                        <p class="card-text">Updated 3hr ago</p>
+                      </div>
+                      <div class="col-auto">
+                        <div class="dropdown"><a class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                          <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Action</a><a class="dropdown-item" href="#!">Another action</a><a class="dropdown-item" href="#!">Something else here</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row row--center">
+                      <div class="col-auto"><a class="avatar" href="#"><img src="images/project-3.jpg"></a></div>
+                      <div class="col no-pl">
+                        <h4 class="card-title"><a class="card-link" href="#!">Safari Exploration</a></h4>
+                        <p class="card-text">Updated 10hr ago</p>
+                      </div>
+                      <div class="col-auto">
+                        <div class="dropdown"><a class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                          <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Action</a><a class="dropdown-item" href="#!">Another action</a><a class="dropdown-item" href="#!">Something else here</a></div>
+                        </div>
+                      </div>
+                    </div>
+                    <hr>
+                    <div class="row row--center">
+                      <div class="col-auto"><a class="avatar" href="#"><img src="images/project-5.jpg"></a></div>
+                      <div class="col no-pl">
+                        <h4 class="card-title"><a class="card-link" href="#!">Personal Site</a></h4>
+                        <p class="card-text">Updated 4hr ago</p>
+                      </div>
+                      <div class="col-auto">
+                        <div class="dropdown"><a class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fe fe-more-vertical"></i></a>
+                          <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#!">Action</a><a class="dropdown-item" href="#!">Another action</a><a class="dropdown-item" href="#!">Something else here</a></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-xl-8">
+                <div class="card">
+                  <div class="card-header no-pd-tb">
+                    <div class="row row--center">
+                      <div class="col">
+                        <h4 class="card-header-title">Performance</h4>
+                      </div>
+                      <div class="col-auto">
+                        <ul class="nav-cards">
+                          <li class="nav-cards-item active" id="performanceAll"><a class="nav-cards-link" href="javascript:void(0)">All</a></li>
+                          <li class="nav-cards-item" id="performanceDirect"><a class="nav-cards-link" href="javascript:void(0)">Direct</a></li>
+                          <li class="nav-cards-item" id="performanceOrganic"><a class="nav-cards-link" href="javascript:void(0)">Organic</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card-body">
+                    <div class="chart right">
+                      <div class="canvas-wrapper">
+                        <canvas id="performance"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table-goal">
+            <div class="row">
+              <div class="col-12 col-xl-7"></div>
+              <div class="col-12 col-xl-5 right">
+                <div class="card">
+                  <div class="card-body text-center">
+                    <div class="row row--center">
+                      <div class="col-12 col-xl-10"><img class="happy" src="images/happiness.svg">
+                        <h3 class="mb-2">We released 2008 new versions of our theme for glory.</h3>
+                        <p class="text-muted">This is a true story and totally not made up. This is going to be better in the long run but for now this is the way it is.</p><a class="btn btn-primary" href="#!">Try it for free</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -371,6 +596,7 @@
     <script src="vendor/javascripts/jquery.min.js" type="text/javascript"></script>
     <script src="vendor/javascripts/bootstrap.min.js" type="text/javascript"></script>
     <script src="vendor/javascripts/Chart.min.js" type="text/javascript"></script>
+    <script src="vendor/javascripts/Chart.extension.min.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
   </body>
 </html>

@@ -1,0 +1,100 @@
+//-------------------------------------------------------
+//- Modules :: Modal activity
+//-------------------------------------------------------
+
+mixin modalActivity()
+  // modal activity
+  .modal.fade.modal-activity#sidebarModalActivity(aria-hidden="true")
+    .modal-dialog.modal-dialog-vertical
+      .modal-content
+        .modal-header
+          h4.modal-title Notifications
+          button(
+            type="button" class="close" data-dismiss="modal" aria-label="Close"
+          )
+            span(
+              aria-hidden="true"
+            ) &times;
+        .modal-body
+          .d-flex.list-group
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-1.jpg")
+                .col.text-muted
+                  b.text-body Dianna Smiley
+                  span.txt-normal shared your post with
+                  b.text-body Ab Hadley, Adolfo Hess
+                  span.txt-normal , and
+                  b.text-body 3 others
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-2.jpg")
+                .col.text-muted
+                  b.text-body Ab Hadley
+                  span.txt-normal reacted to your post with a 😍
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-3.jpg")
+                .col.text-muted
+                  b.text-body Adolfo Hess
+                  span.txt-normal commented 
+                  blockquote.text-body “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-4.jpg")
+                .col.text-muted
+                  b.text-body Daniela Dewitt
+                  span.txt-normal subscribed to you.
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-5.jpg")
+                .col.text-muted
+                  b.text-body Miyah Myles
+                  span.txt-normal shared your post with
+                  b.text-body Ryu Duke, Glen Rouse
+                  span.txt-normal and
+                  b.text-body 3 others
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-6.jpg")
+                .col.text-muted
+                  b.text-body Ryu Duke
+                  span.txt-normal reacted to your post with a 😍
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-7.jpg")
+                .col.text-muted
+                  b.text-body Glen Rouse
+                  span.txt-normal commented 
+                  blockquote.text-body “I don’t think this really makes sense to do without approval from Johnathan since he’s the one...”
+                .col-auto.text-muted
+                  |2m
+            a.list-group-item(href="#")
+              .row
+                .col-auto
+                  img.avatar.avatar-sm(src="images/avatar-8.jpg")
+                .col.text-muted
+                  b.text-body Grace Gross
+                  span.txt-normal subscribed to you.
+                .col-auto.text-muted
+                  |2m
+  /// end modal activity
