@@ -309,10 +309,10 @@ $(function () {
           display: false,
         },
         elements: {
-          point:{
-              radius: 0
+          point: {
+            radius: 0
           }
-      }
+        }
       }
     })
   }
@@ -339,14 +339,14 @@ $(function () {
   $("#performanceDirect").on("click", function () {
     $(".nav-cards-item").removeClass("active");
     $(this).addClass("active");
-    dataPerformance.datasets[0].data = [7,35,12,27,34,17,19,30,28,32,24,39];
+    dataPerformance.datasets[0].data = [7, 35, 12, 27, 34, 17, 19, 30, 28, 32, 24, 39];
     _chart3.update();
   });
 
   $("#performanceOrganic").on("click", function () {
     $(".nav-cards-item").removeClass("active");
     $(this).addClass("active");
-    dataPerformance.datasets[0].data = [2,12,35,25,36,25,34,16,4,14,15,37];
+    dataPerformance.datasets[0].data = [2, 12, 35, 25, 36, 25, 34, 16, 4, 14, 15, 37];
     _chart3.update();
   });
 });
