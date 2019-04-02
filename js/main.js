@@ -322,7 +322,7 @@ $(function () {
     datasets: [{
       label: "Performance",
       data: [0, 10, 5, 15, 10, 20, 15, 25, 20, 30, 25, 40],
-      backgroundColor: "#fff",
+      backgroundColor: "transparent",
       borderColor: "#2c7be5"
     }]
   }
