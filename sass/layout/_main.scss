@@ -626,6 +626,65 @@ table.dataTable.no-footer {
 
 table.dataTable thead .sorting_desc,
 table.dataTable thead .sorting_asc,
-table.dataTable thead .sorting{
+table.dataTable thead .sorting {
   background-image: none !important;
+}
+
+@media (max-width: 1199px) {
+  .card {
+    margin-bottom: 24px;
+  }
+
+  .stats {
+    margin-bottom: 0;
+  }
+
+  .table-goal .right .row--center {
+    padding-bottom: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+
+  .sidebar,
+  .main {
+    width: 100%;
+  }
+
+  .sidebar__inner {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .container-fluild {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+  }
+
+  .sidebar__img {
+    max-height: 24px;
+  }
+
+  .nav-collapse:not(.show) {
+    display: none;
+  }
+
+  .navbar-light .navbar-toggler {
+    color: rgba(0, 0, 0, .5);
+    border: 0;
+    font-size: 1.2rem;
+    padding: 4px 12px;
+  }
+
+  .dropdown-menu.show {
+    right: 0 !important;
+    left: auto !important;
+    transform: translateX(0) !important;
+  }
 }

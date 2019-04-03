@@ -351,4 +351,17 @@ $(function () {
   });
 
   $('#js-table-goal').DataTable();
+
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    $(".navbar-user_drop").eq(0).appendTo(".sidebar__inner .container-fluild").eq(0);
+    $(".navbar-user_drop").removeClass("dropup").addClass("dropdown");
+  }
+
+  $(window).resize(function () {
+    if ($(this).width() <= 768) {
+      $(".navbar-user_drop").eq(0).appendTo(".sidebar__inner .container-fluild").eq(0);
+      $(".navbar-user_drop").removeClass("dropup").addClass("dropdown");
+    }
+  });
+
 });

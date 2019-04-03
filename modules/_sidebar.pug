@@ -6,12 +6,17 @@ mixin sidebar()
   aside.sidebar
     .navbar.navbar-vertical.navbar-expand-md.fixed-left.navbar-light.sidebar__inner
       .container-fluild
+        button(
+          class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation"
+        ) 
+          span(class="navbar-toggler-icon")
+
         // logo
         .sidebar__logo
           a.sidebar__link(href="#")
             img.sidebar__img(src="images/logo.svg")
         /// end logo
-        .nav-collapse
+        .nav-collapse#sidebarCollapse
           // main nav
           .collapse.navbar-collapse.main-nav
             +menu()
