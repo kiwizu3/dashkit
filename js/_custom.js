@@ -349,4 +349,6 @@ $(function () {
     dataPerformance.datasets[0].data = [2, 12, 35, 25, 36, 25, 34, 16, 4, 14, 15, 37];
     _chart3.update();
   });
+
+  $('#js-table-goal').DataTable();
 });

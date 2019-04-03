@@ -1,9 +1,5 @@
 //-------------------------------------------------------
 //- Modules :: Plugins
 //-------------------------------------------------------
-mixin plugins(args)
-  each arg in args
-    script(
-      src= `${arg}`
-      type="text/javascript"
-    )
+mixin plugins(src)
+  script(src= "js/main.min.js" type="text/javascript")

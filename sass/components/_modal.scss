@@ -23,12 +23,12 @@
     .modal-title {
       font-size: 0.9375rem;
       color: $navbar-link-active-color;
-      letter-spacing: -0.3px;
+      letter-spacing: calc(-3/10px);
     }
 
     .close {
       color: $text-muted-color;
-      font-size: 22.5px;
+      font-size: calc(45/2px);
 
       &:active {
         outline: 0;
@@ -126,7 +126,7 @@
 
     &__title {
       font-size: 20px;
-      letter-spacing: -0.4px;
+      letter-spacing: calc(-4/10px);
       font-weight: 500;
 
       margin: {
@@ -145,7 +145,7 @@
 
     &__subtitle {
       font-size: 15px;
-      letter-spacing: -0.4px;
+      letter-spacing: calc(-4/10px);
       margin-bottom: 3px;
     }
 
@@ -163,7 +163,7 @@
     .btn__demo {
       padding: 8px 12px;
       margin-right: 8px;
-      color: #283e59;
+      color: $cl-blue;
       background-color: $light-color;
       border-color: $btn-demo-color;
       border-radius: 6px !important;
@@ -191,7 +191,6 @@
       background-color: $light-color;
       border-color: $navbar-badge-border;
       color: $navbar-badge-border;
-
       box-shadow: none;
     }
 
@@ -279,6 +278,9 @@
 
   .list-group {
     &-item {
+      &:last-child{
+        border: 0;
+      }
       &:hover {
         text-decoration: none;
       }
@@ -299,7 +301,7 @@
       }
 
       .text-body {
-        letter-spacing: -0.3px;
+        letter-spacing: calc(-3/10px);
         font-size: 15px;
         font-weight: 500;
         margin-bottom: 3px;
@@ -339,14 +341,14 @@
 
   .avatar-sm {
     display: inline-block;
-    width: 3rem;
-    height: 3rem;
+    width: 48px;
+    height: 48px;
     font-size: 1rem;
   }
 
   .avatar-lg {
     display: inline-block;
-    width: 4rem;
+    width: 64px;
   }
 }
 

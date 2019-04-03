@@ -85,8 +85,8 @@
       display: inline-block;
       min-width: 28px;
       font-size: 17px;
-      padding-bottom: 2.125px;
-      line-height: 20.5px;
+      padding-bottom: calc(17/8px);
+      line-height: calc(41/2px);
     }
   }
 
@@ -106,7 +106,7 @@
           content: "New";
           display: inline-block;
           padding: 3px 5px;
-          font-size: 9.75px;
+          font-size: calc(39/4px);
           font-weight: 400;
           line-height: 1;
           text-align: center;
@@ -180,7 +180,7 @@
     font-weight: 500;
     text-transform: uppercase;
     text-align: left;
-    letter-spacing: 0.4px;
+    letter-spacing: calc(4/10px);
   }
 
   .navbar-nav {
@@ -201,8 +201,8 @@
     border-radius: 6px;
     background: $my-badge-color;
     font-weight: 400;
-    padding: 2.7125px 5.7125px;
-    padding-left: 4.9125px;
+    padding: calc(217/80px) calc(457/80px);
+    padding-left: calc(393/80px);
     line-height: normal;
   }
 }
@@ -211,9 +211,9 @@
   line-height: normal;
   align-items: center;
   justify-content: space-around;
-  margin-left: -1.5rem;
-  margin-right: -1.5rem;
-  padding: 1.5rem 1.5rem;
+  margin-left: -24px;
+  margin-right: -24px;
+  padding: 24px;
   border-top-width: 1px;
   border-top-style: solid;
   border-top-color: $light-border-color;
@@ -234,7 +234,7 @@
 
     i.fe {
       display: block;
-      min-width: 25.5px;
+      min-width: calc(51/2px);
       text-align: center;
       font-size: 17px;
     }
@@ -327,4 +327,19 @@
 
 .text-muted {
   color: $text-muted-color !important;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding:4px 8px;
+  color: $navbar-link-active-color;
+  text-align: center;
+  background-color: $light-border-color;
+  border-radius: 6px;
+}
+.bs-tooltip-auto[x-placement^=top] .arrow:before,
+.bs-tooltip-top .arrow:before {
+  top: 0;
+  border-width: 6.4px 6.4px 0;
+  border-top-color: $light-border-color;
 }

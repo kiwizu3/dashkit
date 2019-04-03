@@ -158,7 +158,149 @@ section.main
                 .col-auto
                   a.btn.btn-sm.btn-white.btn--border Export
             .card-body
-              
+              .table-responsive
+                table.table.table-sm.card-table#js-table-goal
+                  thead
+                    tr
+                      th
+                        a.text-muted(data-sort="goal-project", href="#!") Goal
+                      th
+                        a.text-muted(data-sort="goal-project", href="#!") Status
+                      th 
+                        a.text-muted(data-sort="goal-project", href="#!") Progress
+                      th
+                        a.text-muted(data-sort="goal-project", href="#!") Due date
+                      th.text-right
+                        | Team
+                      th
+                  tbody
+                    tr
+                      td.goal-project Update the API
+                      td.goal-status 
+                        span.text-warning ● 
+                        | In progress
+                      td.goal-progress 55%
+                      td.goal-date 07/24/18
+                      td.text-right
+                        .avatar-list
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Dianna Smiley")
+                            img.avatar-img.rounded-circle(src="images/avatar-1.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Ab Hadley")
+                            img.avatar-img.rounded-circle(src="images/avatar-2.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Adolfo Hess")
+                            img.avatar-img.rounded-circle(src="images/avatar-3.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Daniela Dewitt")
+                            img.avatar-img.rounded-circle(src="images/avatar-4.jpg")
+                      td.text-right
+                        .dropdown
+                          a(
+                            class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                          )
+                            i(class="fe fe-more-vertical")
+                          .dropdown-menu.dropdown-menu-right
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                    tr
+                      td.goal-project Release v1.2-Beta
+                      td.goal-status 
+                        span.text-warning ● 
+                        | In progress
+                      td.goal-progress 25%
+                      td.goal-date 08/26/18
+                      td.text-right
+                        .avatar-list
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Dianna Smiley")
+                            img.avatar-img.rounded-circle(src="images/avatar-1.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Ab Hadley")
+                            img.avatar-img.rounded-circle(src="images/avatar-2.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Adolfo Hess")
+                            img.avatar-img.rounded-circle(src="images/avatar-3.jpg")
+                      td.text-right
+                        .dropdown
+                          a(
+                            class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                          )
+                            i(class="fe fe-more-vertical")
+                          .dropdown-menu.dropdown-menu-right
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                    tr
+                      td.goal-project GDPR Compliance
+                      td.goal-status 
+                        span.text-success ● 
+                        | Completed
+                      td.goal-progress 100%
+                      td.goal-date 06/19/18
+                      td.text-right
+                        .avatar-list
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Dianna Smiley")
+                            img.avatar-img.rounded-circle(src="images/avatar-1.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Ab Hadley")
+                            img.avatar-img.rounded-circle(src="images/avatar-2.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Adolfo Hess")
+                            img.avatar-img.rounded-circle(src="images/avatar-3.jpg")
+                      td.text-right
+                        .dropdown
+                          a(
+                            class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                          )
+                            i(class="fe fe-more-vertical")
+                          .dropdown-menu.dropdown-menu-right
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                    tr
+                      td.goal-project v1.2 Documentatio
+                      td.goal-status 
+                        span.text-danger ● 
+                        | Cancelled
+                      td.goal-progress 0%
+                      td.goal-date 06/25/18
+                      td.text-right
+                        .avatar-list
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Dianna Smiley")
+                            img.avatar-img.rounded-circle(src="images/avatar-1.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Ab Hadley")
+                            img.avatar-img.rounded-circle(src="images/avatar-2.jpg")
+                      td.text-right
+                        .dropdown
+                          a(
+                            class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                          )
+                            i(class="fe fe-more-vertical")
+                          .dropdown-menu.dropdown-menu-right
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
+                    tr
+                      td.goal-project Plan design offsite
+                      td.goal-status 
+                        span.text-success ● 
+                        | Completed
+                      td.goal-progress 100%
+                      td.goal-date 06/30/18
+                      td.text-right
+                        .avatar-list
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Dianna Smiley")
+                            img.avatar-img.rounded-circle(src="images/avatar-1.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Ab Hadley")
+                            img.avatar-img.rounded-circle(src="images/avatar-2.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Adolfo Hess")
+                            img.avatar-img.rounded-circle(src="images/avatar-3.jpg")
+                          a.avatar.avatar-sm(href="#!",data-toggle="tooltip",title="Daniela Dewitt")
+                            img.avatar-img.rounded-circle(src="images/avatar-4.jpg")
+                      td.text-right
+                        .dropdown
+                          a(
+                            class="dropdown-ellipses dropdown-toggle" href="#!" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                          )
+                            i(class="fe fe-more-vertical")
+                          .dropdown-menu.dropdown-menu-right
+                            a.dropdown-item(href='#!') Action
+                            a.dropdown-item(href='#!') Another action
+                            a.dropdown-item(href='#!') Something else here
         .col-12.col-xl-5.right
           .card
             .card-body.text-center
