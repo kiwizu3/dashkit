@@ -655,6 +655,8 @@ table.dataTable thead .sorting {
   }
 
   .sidebar__inner {
+    padding-bottom: 0;
+    padding-top: 0;
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -664,6 +666,7 @@ table.dataTable thead .sorting {
       justify-content: space-between;
       align-items: center;
       width: 100%;
+      flex-wrap: wrap;
     }
   }
 
@@ -686,5 +689,45 @@ table.dataTable thead .sorting {
     right: 0 !important;
     left: auto !important;
     transform: translateX(0) !important;
+  }
+
+  .nav-collapse:before {
+    content: "";
+    display: block;
+    border-top-width: 1px;
+    border-top-style: solid;
+    margin: 0 -2rem .5rem;
+    border-top-color: #e3ebf6;
+  }
+
+  .navbar-light {
+    border-bottom: 1px solid #e3ebf6;
+  }
+
+  .navbar-light .navbar-toggler {
+    outline: 0;
+  }
+
+  .nav-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    padding: 0 0 0 16px;
+  }
+
+  .nav.nav-flex-column .nav-item.has-badge .nav-link:before {
+    left: -32px;
+  }
+
+  .navbar-user__search i.fe {
+    text-align: left;
+  }
+
+  .navbar-light .navbar-nav .nav-link.navbar-user__search:after {
+    display: none;
+
+  }
+
+  .navbar-user {
+    display: none !important;
   }
 }

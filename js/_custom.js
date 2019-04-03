@@ -353,15 +353,33 @@ $(function () {
   $('#js-table-goal').DataTable();
 
   if (window.matchMedia("(max-width: 768px)").matches) {
-    $(".navbar-user_drop").eq(0).appendTo(".sidebar__inner .container-fluild").eq(0);
+    $(".navbar-user_drop").eq(0).insertAfter(".sidebar__logo").eq(0);
     $(".navbar-user_drop").removeClass("dropup").addClass("dropdown");
+    $(".main-nav>.navbar-nav").append('<li class="nav-item"><a class="nav-link collapsed level1 navbar-user__search" href="#sidebarModalSearch" data-toggle="modal"><i class="fe fe-search"></i> <span class="text-link"> Notification</span></a></li>')
+  }
+  else {
+    $(".nav-collapse").removeAttr("style");
+    $(".navbar-user_drop").insertAfter(".navbar-user__noti");
+    $(".navbar-user_drop").removeClass("dropdown").addClass("dropup");
+    $(".main-nav>.navbar-nav>.nav-item>.navbar-user__search").remove();
   }
 
   $(window).resize(function () {
     if ($(this).width() <= 768) {
-      $(".navbar-user_drop").eq(0).appendTo(".sidebar__inner .container-fluild").eq(0);
+      $(".navbar-user_drop").eq(0).insertAfter(".sidebar__logo").eq(0);
       $(".navbar-user_drop").removeClass("dropup").addClass("dropdown");
+      $(".main-nav>.navbar-nav").append('<li class="nav-item"><a class="nav-link collapsed level1 navbar-user__search" href="#sidebarModalSearch" data-toggle="modal"><i class="fe fe-search"></i> <span class="text-link"> Notification</span></a></li>')
+    } else {
+      $(".nav-collapse").removeAttr("style");
+      $(".navbar-user_drop").insertAfter(".navbar-user__noti");
+      $(".navbar-user_drop").removeClass("dropdown").addClass("dropup");
+      $(".main-nav>.navbar-nav>.nav-item>.navbar-user__search").remove();
     }
   });
 
+  $(".navbar-toggler").click(function (e) {
+    e.preventDefault();
+    $("#sidebarCollapse").slideToggle("300");
+
+  });
 });

@@ -7,7 +7,7 @@ mixin sidebar()
     .navbar.navbar-vertical.navbar-expand-md.fixed-left.navbar-light.sidebar__inner
       .container-fluild
         button(
-          class="navbar-toggler" type="button" data-toggle="collapse" data-target="#sidebarCollapse" aria-controls="sidebarCollapse" aria-expanded="false" aria-label="Toggle navigation"
+          class="navbar-toggler" type="button"
         ) 
           span(class="navbar-toggler-icon")
 
@@ -18,14 +18,14 @@ mixin sidebar()
         /// end logo
         .nav-collapse#sidebarCollapse
           // main nav
-          .collapse.navbar-collapse.main-nav
+          .navbar-collapse.main-nav
             +menu()
           /// end main nav
 
           hr.navbar-devider.sidebar__line
 
           // docs
-          .collapse.navbar-collapse.docs-nav
+          .navbar-collapse.docs-nav
             h3.navbar-heading Documentation
             +docsNav()
           /// end docs
