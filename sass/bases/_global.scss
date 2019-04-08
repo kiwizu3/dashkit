@@ -16,19 +16,28 @@ img {
   height: auto;
 }
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 5px $white-color;
-  border-radius: 10px;
-  background-color: $white-color
+.navbar,
+.table-responsive {
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 5px $white-color;
+    background-color: $white-color
+  }
 }
 
-::-webkit-scrollbar {
-  width: 8px;
-  background-color: $main-color;
+.navbar,
+.table-responsive {
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    background-color: $main-color;
+  }
 }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 6px $main-color;
-  background-color: $main-color
+.navbar,
+.table-responsive {
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: $main-color
+  }
+
 }

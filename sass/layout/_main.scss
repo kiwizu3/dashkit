@@ -152,6 +152,10 @@
     }
   }
 
+  .custom-control-label {
+    cursor: pointer;
+  }
+
   .custom-control-label:before {
     background-color: rgb(227, 235, 246);
     border: 0 solid $cl-gray-2;
@@ -463,12 +467,13 @@
 .table-goal {
   .right {
     .row--center {
+      padding-bottom: 24px;
       justify-content: center;
     }
 
     .happy {
       max-width: 272px;
-      margin-top: -36px;
+      margin-top: -2rem;
       margin-bottom: 24px;
     }
 
@@ -544,6 +549,7 @@
   }
 
   .table th {
+    white-space: nowrap;
     background-color: $btn-demo-hover;
     text-transform: uppercase;
     font-weight: 600;
@@ -568,6 +574,7 @@
   }
 
   .table td {
+    white-space: nowrap;
     padding: 15px;
     vertical-align: top;
     border-top: 1px solid $cl-card;
@@ -585,11 +592,16 @@
   }
 
   .avatar-list .avatar:not(:last-child) {
-    mask-image: url("../images/avatar-group.svg");
     -webkit-mask-image: url("../images/avatar-group.svg");
     -webkit-mask-size: 100% 100%;
     mask-size: 100% 100%;
   }
+
+  .avatar-list .avatar:hover {
+    -webkit-mask-image: none;
+    mask-image: none;
+    z-index: 100;
+}
 
   .avatar {
     position: relative;
